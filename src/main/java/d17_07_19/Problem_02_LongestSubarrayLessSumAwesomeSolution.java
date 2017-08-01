@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-    给定一个数组，值可以为正、负和0，请返回累加和小于等于k的最长子数组长度。
+ * 给定一个数组，值可以为正、负和0，请返回累加和小于等于k的最长子数组长度。
  */
 public class Problem_02_LongestSubarrayLessSumAwesomeSolution {
 
@@ -26,12 +26,12 @@ public class Problem_02_LongestSubarrayLessSumAwesomeSolution {
         }
         Map<Integer, Integer> ends = new HashMap<Integer, Integer>();   //用map维护end_index,查询为O(1)
         int[] sums = new int[arr.length];                               //用数组维护min_index
-        sums[arr.length-1] = arr[arr.length-1];
-        ends.put(arr.length-1, arr.length-1);
-        for (int i = arr.length-2; i >= 0; i--) {
-            if (sums[i+1] < 0) {
-                sums[i] = arr[i] + sums[i+1];
-                ends.put(i, ends.get(i+1));
+        sums[arr.length - 1] = arr[arr.length - 1];
+        ends.put(arr.length - 1, arr.length - 1);
+        for (int i = arr.length - 2; i >= 0; i--) {
+            if (sums[i + 1] < 0) {
+                sums[i] = arr[i] + sums[i + 1];
+                ends.put(i, ends.get(i + 1));
             } else {
                 sums[i] = arr[i];
                 ends.put(i, i);
@@ -47,7 +47,7 @@ public class Problem_02_LongestSubarrayLessSumAwesomeSolution {
             }
             sum -= end > i ? arr[i] : 0;       //如果end在i后面，sum则减去此时数组中i位置的值，为遍历下一次准备
             res = Math.max(res, end - i);      //更新res
-            end = Math.max(i+1, end);          //更新end
+            end = Math.max(i + 1, end);          //更新end
         }
         return res;
     }

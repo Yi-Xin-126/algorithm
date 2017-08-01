@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-    给定一个数组，值可以为正、负和0，请返回累加和为给定值k的最长子数组长度。
+ * 给定一个数组，值可以为正、负和0，请返回累加和为给定值k的最长子数组长度。
  */
 public class Problem_02_LongestSumSubArrayLength {
 
@@ -32,8 +32,8 @@ public class Problem_02_LongestSumSubArrayLength {
         map.put(0, -1);   //important
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
-            if (map.containsKey(sum-k)) {
-                len = Math.max(len, i - map.get(sum-k));    //important
+            if (map.containsKey(sum - k)) {
+                len = Math.max(len, i - map.get(sum - k));    //important
             }
             if (!map.containsKey(sum)) {
                 map.put(sum, i);

@@ -1,7 +1,7 @@
 package d17_07_19;
 
 /**
-    给定一个数组，值全是正数，请返回累加和为给定值k的最长子数组长度。
+ * 给定一个数组，值全是正数，请返回累加和为给定值k的最长子数组长度。
  */
 public class Problem_02_LongestSumSubArrayLengthInPositiveArray {
 
@@ -12,7 +12,7 @@ public class Problem_02_LongestSumSubArrayLengthInPositiveArray {
         遍历结束时，返回len
     */
     public static int getMaxLength(int[] arr, int k) {
-        if (arr == null || arr.length == 0 || k<= 0) {
+        if (arr == null || arr.length == 0 || k <= 0) {
             return 0;
         }
         int left = 0;
@@ -21,7 +21,7 @@ public class Problem_02_LongestSumSubArrayLengthInPositiveArray {
         int len = 0;
         while (right < arr.length) {
             if (sum == k) {
-                len = Math.max(len, right-left+1);
+                len = Math.max(len, right - left + 1);
                 sum -= arr[left++];
             } else if (sum < k) {
                 right++;
