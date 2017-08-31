@@ -7,10 +7,11 @@ public class Sort_03_InsertionSort {
 
     public static int[] insertionSort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
-            for (int j = i - 1; j >= 0; j--) {
-                if (arr[i] < arr[j]) {
-                    swap(arr, i, j);
-                    i = j;
+            for (int j = i; j != 0; j--) {
+                if (arr[j-1] > arr[j]) {
+                    swap(arr, j-1, j);
+                } else {
+                    break;
                 }
             }
         }

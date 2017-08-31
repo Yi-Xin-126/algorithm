@@ -38,5 +38,6 @@ public class Problem_09_1 {
 
     public static void main(String[] args) {
         System.out.println(Fabonacci1(43));
+        System.out.println(Fabonacci2(43));
     }
 }
