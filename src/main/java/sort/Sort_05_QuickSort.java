@@ -2,6 +2,8 @@ package sort;
 
 /**
  * 快速排序  f(N)=O(N*logN) s(N)=O(logN)~O(N)  不稳定
+ * 快速排序是最快的通用排序算法，在大多数实际情况中，快速排序是最佳选择。
+ * 在java的默认排序中是使用的是三向切分排序。
  */
 public class Sort_05_QuickSort {
 

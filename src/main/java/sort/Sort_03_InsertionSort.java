@@ -1,7 +1,8 @@
 package sort;
 
 /**
- * 插入排序  f(N)=O(N*N) s(N)=O(1)  稳定
+ * 插入排序  f(N)=O(N*N) s(N)=O(1)  稳定  大部分已经排好序是较好
+ * 数据量小时使用。并且大部分已经被排序。
  */
 public class Sort_03_InsertionSort {
 

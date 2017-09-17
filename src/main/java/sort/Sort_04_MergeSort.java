@@ -1,7 +1,8 @@
 package sort;
 
 /**
- * 归并排序  f(N)=O(N*logN) s(N)=O(N)  稳定
+ * 归并排序  f(N)=O(N*logN) s(N)=O(N)  稳定   n大时好
+ * 如果需要稳定，空间不是很重要，请选择归并
  */
 public class Sort_04_MergeSort {
 
